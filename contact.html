@@ -152,6 +152,17 @@
   menuClose.addEventListener('click', () => {
     mobileMenu.classList.add('-translate-x-full');
   });
+
+  // Close menu when clicking outside
+  document.addEventListener('click', (event) => {
+    const isClickInsideMenu = mobileMenu.contains(event.target);
+    const isClickOnToggle = menuToggle.contains(event.target);
+    const isMenuOpen = !mobileMenu.classList.contains('-translate-x-full');
+
+    if (isMenuOpen && !isClickInsideMenu && !isClickOnToggle) {
+      mobileMenu.classList.add('-translate-x-full');
+    }
+  });
 </script>
 
 </body>
