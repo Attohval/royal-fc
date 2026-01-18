@@ -1,0 +1,768 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Teams | Royal FC</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: {
+            royalBlue: '#1e3a8a',
+            royalOrange: '#f97316'
+          }
+        }
+      }
+    }
+  </script>
+</head>
+<body class="bg-gray-100 pt-16">
+
+<!-- NAVBAR -->
+<nav class="fixed top-0 w-full bg-royalBlue text-white z-10">
+  <div class="max-w-7xl mx-auto flex justify-between items-center p-4">
+    <div class="flex items-center gap-2">
+      <img src="assets/logo/logo.png" class="h-10" alt="Royal FC Logo">
+      <span class="font-bold text-xl">Royal FC</span>
+    </div>
+    <div class="md:hidden">
+      <button id="menu-toggle" class="text-white focus:outline-none" aria-label="Open menu">
+        <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"></path>
+        </svg>
+      </button>
+    </div>
+    <div class="space-x-6 hidden md:flex" id="menu">
+      <a href="index.html" class="hover:text-royalOrange">Home</a>
+      <a href="about.html" class="hover:text-royalOrange">About</a>
+      <a href="teams.html" class="hover:text-royalOrange">Teams</a>
+      <a href="fixtures.html" class="hover:text-royalOrange">Fixtures</a>
+      <a href="news.html" class="hover:text-royalOrange">News</a>
+      <a href="gallery.html" class="hover:text-royalOrange">Gallery</a>
+      <a href="contact.html" class="hover:text-royalOrange">Contact</a>
+    </div>
+  </div>
+  <div class="md:hidden fixed top-0 left-0 h-full w-64 bg-royalBlue text-white transform -translate-x-full transition-transform duration-300 ease-in-out z-20" id="mobile-menu">
+    <div class="flex justify-between items-center p-4">
+      <span class="font-bold text-xl">Menu</span>
+      <button id="menu-close" class="text-white focus:outline-none" aria-label="Close menu">
+        <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"></path>
+        </svg>
+      </button>
+    </div>
+    <a href="index.html" class="block px-4 py-2 hover:bg-royalOrange">Home</a>
+    <a href="about.html" class="block px-4 py-2 hover:bg-royalOrange">About</a>
+    <a href="teams.html" class="block px-4 py-2 hover:bg-royalOrange">Teams</a>
+    <a href="fixtures.html" class="block px-4 py-2 hover:bg-royalOrange">Fixtures</a>
+    <a href="news.html" class="block px-4 py-2 hover:bg-royalOrange">News</a>
+    <a href="gallery.html" class="block px-4 py-2 hover:bg-royalOrange">Gallery</a>
+    <a href="contact.html" class="block px-4 py-2 hover:bg-royalOrange">Contact</a>
+  </div>
+</nav>
+
+<section class="max-w-7xl mx-auto py-16 px-4">
+  <div class="text-center mb-16">
+    <h1 class="text-5xl font-bold mb-6 text-royalBlue">Royal FC All-Stars Teams</h1>
+    <p class="text-xl text-gray-600 max-w-3xl mx-auto">
+      Two elite squads united under one banner. Champions and Strikers compete fiercely while sharing
+      the same Royal FC pride, facilities, and commitment to excellence.
+    </p>
+  </div>
+
+  <!-- CLUB UNITY HEADER -->
+  <div class="bg-gradient-to-r from-royalBlue to-blue-900 text-white rounded-xl p-8 mb-12 text-center">
+    <h2 class="text-3xl font-bold mb-4">United in Purpose, Divided in Competition</h2>
+    <p class="text-lg opacity-90 max-w-4xl mx-auto">
+      Royal FC is an all-stars club where every member contributes to our shared success.
+      Whether you wear the Champions blue or Strikers orange, you're part of the Royal FC family.
+    </p>
+  </div>
+
+  <div class="grid lg:grid-cols-2 gap-12 mb-16">
+    <!-- CHAMPIONS TEAM -->
+    <div class="bg-white rounded-xl shadow-xl overflow-hidden hover:shadow-2xl transition-shadow">
+      <div class="bg-royalBlue text-white p-6">
+        <div class="flex items-center">
+          <div class="w-16 h-16 bg-white rounded-full flex items-center justify-center mr-4">
+            <span class="text-royalBlue font-bold text-2xl">C</span>
+          </div>
+          <div>
+            <h2 class="text-3xl font-bold">Champions</h2>
+            <p class="text-blue-100">Elite squad with tactical mastery</p>
+          </div>
+        </div>
+      </div>
+      <div class="p-8">
+        <div class="grid md:grid-cols-2 gap-6 mb-6">
+          <div class="text-center">
+            <div class="w-16 h-16 bg-royalBlue rounded-full flex items-center justify-center mx-auto mb-2">
+              <span class="text-white font-bold text-xl">12</span>
+            </div>
+            <p class="font-semibold">Players</p>
+          </div>
+          <div class="text-center">
+            <div class="w-16 h-16 bg-royalOrange rounded-full flex items-center justify-center mx-auto mb-2">
+              <span class="text-white font-bold text-xl">2020</span>
+            </div>
+            <p class="font-semibold">Founded</p>
+          </div>
+        </div>
+        <h3 class="text-xl font-bold mb-4 text-royalBlue">Team Philosophy</h3>
+        <p class="text-gray-700 mb-6">
+          Our premier team combines experience, strategic thinking, and defensive solidity.
+          Known for their disciplined approach and leadership on the field, the Champions
+          represent the pinnacle of tactical football.
+        </p>
+        <h3 class="text-xl font-bold mb-4 text-royalBlue">Key Strengths</h3>
+        <ul class="space-y-2 text-gray-700">
+          <li class="flex items-center">
+            <span class="w-2 h-2 bg-royalBlue rounded-full mr-3"></span>
+            Tactical discipline and organization
+          </li>
+          <li class="flex items-center">
+            <span class="w-2 h-2 bg-royalBlue rounded-full mr-3"></span>
+            Strong defensive structure
+          </li>
+          <li class="flex items-center">
+            <span class="w-2 h-2 bg-royalBlue rounded-full mr-3"></span>
+            Leadership and experience
+          </li>
+          <li class="flex items-center">
+            <span class="w-2 h-2 bg-royalBlue rounded-full mr-3"></span>
+            Counter-attacking proficiency
+          </li>
+        </ul>
+      </div>
+    </div>
+
+    <!-- STRIKERS TEAM -->
+    <div class="bg-white rounded-xl shadow-xl overflow-hidden hover:shadow-2xl transition-shadow">
+      <div class="bg-royalOrange text-white p-6">
+        <div class="flex items-center">
+          <div class="w-16 h-16 bg-white rounded-full flex items-center justify-center mr-4">
+            <span class="text-royalOrange font-bold text-2xl">S</span>
+          </div>
+          <div>
+            <h2 class="text-3xl font-bold">Strikers</h2>
+            <p class="text-orange-100">Dynamic attacking force</p>
+          </div>
+        </div>
+      </div>
+      <div class="p-8">
+        <div class="grid md:grid-cols-2 gap-6 mb-6">
+          <div class="text-center">
+            <div class="w-16 h-16 bg-royalOrange rounded-full flex items-center justify-center mx-auto mb-2">
+              <span class="text-white font-bold text-xl">14</span>
+            </div>
+            <p class="font-semibold">Players</p>
+          </div>
+          <div class="text-center">
+            <div class="w-16 h-16 bg-royalBlue rounded-full flex items-center justify-center mx-auto mb-2">
+              <span class="text-white font-bold text-xl">2021</span>
+            </div>
+            <p class="font-semibold">Founded</p>
+          </div>
+        </div>
+        <h3 class="text-xl font-bold mb-4 text-royalBlue">Team Philosophy</h3>
+        <p class="text-gray-700 mb-6">
+          A high-energy team that thrives on fast-paced, attacking football. The Strikers
+          are renowned for their goal-scoring prowess and relentless pressing style.
+        </p>
+        <h3 class="text-xl font-bold mb-4 text-royalBlue">Key Strengths</h3>
+        <ul class="space-y-2 text-gray-700">
+          <li class="flex items-center">
+            <span class="w-2 h-2 bg-royalOrange rounded-full mr-3"></span>
+            High pressing and intensity
+          </li>
+          <li class="flex items-center">
+            <span class="w-2 h-2 bg-royalOrange rounded-full mr-3"></span>
+            Creative attacking play
+          </li>
+          <li class="flex items-center">
+            <span class="w-2 h-2 bg-royalOrange rounded-full mr-3"></span>
+            Goal-scoring ability
+          </li>
+          <li class="flex items-center">
+            <span class="w-2 h-2 bg-royalOrange rounded-full mr-3"></span>
+            Youthful energy and pace
+          </li>
+        </ul>
+      </div>
+    </div>
+  </div>
+
+  <!-- SHARED FACILITIES & COACHING -->
+  <div class="bg-gray-50 rounded-xl p-8 mb-12">
+    <h2 class="text-3xl font-bold text-center mb-8 text-royalBlue">United Under One Roof</h2>
+    <div class="grid md:grid-cols-3 gap-8">
+      <div class="text-center">
+        <div class="w-16 h-16 bg-royalBlue rounded-full flex items-center justify-center mx-auto mb-4">
+          <svg class="w-8 h-8 text-white" fill="currentColor" viewBox="0 0 24 24">
+            <path d="M12 2L2 7v10c0 5.55 3.84 9.74 9 11 5.16-1.26 9-5.45 9-11V7l-10-5z"/>
+          </svg>
+        </div>
+        <h3 class="text-xl font-bold mb-2">World-Class Facilities</h3>
+        <p class="text-gray-600">Both teams share access to our premium training grounds, gym, and recovery facilities.</p>
+      </div>
+      <div class="text-center">
+        <div class="w-16 h-16 bg-royalOrange rounded-full flex items-center justify-center mx-auto mb-4">
+          <svg class="w-8 h-8 text-white" fill="currentColor" viewBox="0 0 24 24">
+            <path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-2 15l-5-5 1.41-1.41L10 14.17l7.59-7.59L19 8l-9 9z"/>
+          </svg>
+        </div>
+        <h3 class="text-xl font-bold mb-2">Expert Coaching Staff</h3>
+        <p class="text-gray-600">Professional coaches and analysts work with both teams to develop individual and collective skills.</p>
+      </div>
+      <div class="text-center">
+        <div class="w-16 h-16 bg-royalBlue rounded-full flex items-center justify-center mx-auto mb-4">
+          <svg class="w-8 h-8 text-white" fill="currentColor" viewBox="0 0 24 24">
+            <path d="M16 4c0-1.11.89-2 2-2s2 .89 2 2-.89 2-2 2-2-.89-2-2zm4 18v-6h2.5l-2.54-7.63A2.01 2.01 0 0 0 18.06 7h-.12a2 2 0 0 0-1.9 1.37L13.5 16H11v6c0 1.1.9 2 2 2h6c1.1 0 2-.9 2-2zm-7-8c0-1.11.89-2 2-2s2 .89 2 2-.89 2-2 2-2-.89-2-2zM4 18v-6h2.5l-2.54-7.63A2.01 2.01 0 0 0 2.06 7H1.94a2 2 0 0 0-1.9 1.37L-2.5 16H-4v6c0 1.1.9 2 2 2h6c1.1 0 2-.9 2-2z"/>
+          </svg>
+        </div>
+        <h3 class="text-xl font-bold mb-2">Team Spirit</h3>
+        <p class="text-gray-600">Cross-team camaraderie and mutual respect foster a united club culture and brotherhood.</p>
+      </div>
+    </div>
+  </div>
+
+  <!-- COMPREHENSIVE PLAYER ROSTERS -->
+  <div class="mb-16">
+    <h2 class="text-4xl font-bold text-center mb-12 text-royalBlue">Royal FC All-Stars Roster</h2>
+
+    <!-- CHAMPIONS TEAM PLAYERS -->
+    <div class="mb-16">
+      <div class="bg-royalBlue text-white rounded-xl p-6 mb-8">
+        <h3 class="text-3xl font-bold text-center">Champions Squad</h3>
+        <p class="text-center text-blue-100 mt-2">Elite tactical masters with defensive solidity</p>
+      </div>
+
+      <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
+        <!-- Goalkeeper -->
+        <div class="bg-white rounded-lg shadow-lg p-6 border-l-4 border-royalBlue">
+          <div class="flex items-center mb-4">
+            <div class="w-12 h-12 bg-royalBlue rounded-full flex items-center justify-center mr-3">
+              <span class="text-white font-bold">GK</span>
+            </div>
+            <div>
+              <h4 class="font-bold text-lg">Marcus Thompson</h4>
+              <p class="text-sm text-gray-600">Goalkeeper • Champions</p>
+            </div>
+          </div>
+          <div class="space-y-2 text-sm">
+            <p><span class="font-semibold">Age:</span> 28</p>
+            <p><span class="font-semibold">Experience:</span> 8 years</p>
+            <p><span class="font-semibold">Joined:</span> 2020</p>
+            <p><span class="font-semibold">Strengths:</span> Shot-stopping, distribution</p>
+          </div>
+        </div>
+
+        <!-- Defenders -->
+        <div class="bg-white rounded-lg shadow-lg p-6 border-l-4 border-royalBlue">
+          <div class="flex items-center mb-4">
+            <div class="w-12 h-12 bg-royalBlue rounded-full flex items-center justify-center mr-3">
+              <span class="text-white font-bold">CB</span>
+            </div>
+            <div>
+              <h4 class="font-bold text-lg">David Chen</h4>
+              <p class="text-sm text-gray-600">Center Back • Champions</p>
+            </div>
+          </div>
+          <div class="space-y-2 text-sm">
+            <p><span class="font-semibold">Age:</span> 26</p>
+            <p><span class="font-semibold">Experience:</span> 6 years</p>
+            <p><span class="font-semibold">Joined:</span> 2020</p>
+            <p><span class="font-semibold">Strengths:</span> Aerial ability, positioning</p>
+          </div>
+        </div>
+
+        <div class="bg-white rounded-lg shadow-lg p-6 border-l-4 border-royalBlue">
+          <div class="flex items-center mb-4">
+            <div class="w-12 h-12 bg-royalBlue rounded-full flex items-center justify-center mr-3">
+              <span class="text-white font-bold">CB</span>
+            </div>
+            <div>
+              <h4 class="font-bold text-lg">Roberto Silva</h4>
+              <p class="text-sm text-gray-600">Center Back • Champions</p>
+            </div>
+          </div>
+          <div class="space-y-2 text-sm">
+            <p><span class="font-semibold">Age:</span> 29</p>
+            <p><span class="font-semibold">Experience:</span> 10 years</p>
+            <p><span class="font-semibold">Joined:</span> 2020</p>
+            <p><span class="font-semibold">Strengths:</span> Leadership, tackling</p>
+          </div>
+        </div>
+
+        <div class="bg-white rounded-lg shadow-lg p-6 border-l-4 border-royalBlue">
+          <div class="flex items-center mb-4">
+            <div class="w-12 h-12 bg-royalBlue rounded-full flex items-center justify-center mr-3">
+              <span class="text-white font-bold">RB</span>
+            </div>
+            <div>
+              <h4 class="font-bold text-lg">James Wilson</h4>
+              <p class="text-sm text-gray-600">Right Back • Champions</p>
+            </div>
+          </div>
+          <div class="space-y-2 text-sm">
+            <p><span class="font-semibold">Age:</span> 25</p>
+            <p><span class="font-semibold">Experience:</span> 5 years</p>
+            <p><span class="font-semibold">Joined:</span> 2020</p>
+            <p><span class="font-semibold">Strengths:</span> Pace, crossing</p>
+          </div>
+        </div>
+
+        <div class="bg-white rounded-lg shadow-lg p-6 border-l-4 border-royalBlue">
+          <div class="flex items-center mb-4">
+            <div class="w-12 h-12 bg-royalBlue rounded-full flex items-center justify-center mr-3">
+              <span class="text-white font-bold">LB</span>
+            </div>
+            <div>
+              <h4 class="font-bold text-lg">Alex Rodriguez</h4>
+              <p class="text-sm text-gray-600">Left Back • Champions</p>
+            </div>
+          </div>
+          <div class="space-y-2 text-sm">
+            <p><span class="font-semibold">Age:</span> 27</p>
+            <p><span class="font-semibold">Experience:</span> 7 years</p>
+            <p><span class="font-semibold">Joined:</span> 2020</p>
+            <p><span class="font-semibold">Strengths:</span> Overlaps, stamina</p>
+          </div>
+        </div>
+
+        <!-- Midfielders -->
+        <div class="bg-white rounded-lg shadow-lg p-6 border-l-4 border-royalBlue">
+          <div class="flex items-center mb-4">
+            <div class="w-12 h-12 bg-royalBlue rounded-full flex items-center justify-center mr-3">
+              <span class="text-white font-bold">CDM</span>
+            </div>
+            <div>
+              <h4 class="font-bold text-lg">Michael Park</h4>
+              <p class="text-sm text-gray-600">Defensive Midfielder • Champions</p>
+            </div>
+          </div>
+          <div class="space-y-2 text-sm">
+            <p><span class="font-semibold">Age:</span> 30</p>
+            <p><span class="font-semibold">Experience:</span> 12 years</p>
+            <p><span class="font-semibold">Joined:</span> 2020</p>
+            <p><span class="font-semibold">Strengths:</span> Interceptions, passing range</p>
+          </div>
+        </div>
+
+        <div class="bg-white rounded-lg shadow-lg p-6 border-l-4 border-royalBlue">
+          <div class="flex items-center mb-4">
+            <div class="w-12 h-12 bg-royalBlue rounded-full flex items-center justify-center mr-3">
+              <span class="text-white font-bold">CM</span>
+            </div>
+            <div>
+              <h4 class="font-bold text-lg">John Doe</h4>
+              <p class="text-sm text-gray-600">Central Midfielder • Champions</p>
+            </div>
+          </div>
+          <div class="space-y-2 text-sm">
+            <p><span class="font-semibold">Age:</span> 28</p>
+            <p><span class="font-semibold">Experience:</span> 8 years</p>
+            <p><span class="font-semibold">Joined:</span> 2020</p>
+            <p><span class="font-semibold">Strengths:</span> Vision, ball control</p>
+          </div>
+        </div>
+
+        <div class="bg-white rounded-lg shadow-lg p-6 border-l-4 border-royalBlue">
+          <div class="flex items-center mb-4">
+            <div class="w-12 h-12 bg-royalBlue rounded-full flex items-center justify-center mr-3">
+              <span class="text-white font-bold">CM</span>
+            </div>
+            <div>
+              <h4 class="font-bold text-lg">Carlos Mendoza</h4>
+              <p class="text-sm text-gray-600">Central Midfielder • Champions</p>
+            </div>
+          </div>
+          <div class="space-y-2 text-sm">
+            <p><span class="font-semibold">Age:</span> 26</p>
+            <p><span class="font-semibold">Experience:</span> 6 years</p>
+            <p><span class="font-semibold">Joined:</span> 2020</p>
+            <p><span class="font-semibold">Strengths:</span> Work rate, tackling</p>
+          </div>
+        </div>
+
+        <!-- Forwards -->
+        <div class="bg-white rounded-lg shadow-lg p-6 border-l-4 border-royalBlue">
+          <div class="flex items-center mb-4">
+            <div class="w-12 h-12 bg-royalBlue rounded-full flex items-center justify-center mr-3">
+              <span class="text-white font-bold">RW</span>
+            </div>
+            <div>
+              <h4 class="font-bold text-lg">Luis Garcia</h4>
+              <p class="text-sm text-gray-600">Right Winger • Champions</p>
+            </div>
+          </div>
+          <div class="space-y-2 text-sm">
+            <p><span class="font-semibold">Age:</span> 24</p>
+            <p><span class="font-semibold">Experience:</span> 4 years</p>
+            <p><span class="font-semibold">Joined:</span> 2022</p>
+            <p><span class="font-semibold">Strengths:</span> Dribbling, pace</p>
+          </div>
+        </div>
+
+        <div class="bg-white rounded-lg shadow-lg p-6 border-l-4 border-royalBlue">
+          <div class="flex items-center mb-4">
+            <div class="w-12 h-12 bg-royalBlue rounded-full flex items-center justify-center mr-3">
+              <span class="text-white font-bold">ST</span>
+            </div>
+            <div>
+              <h4 class="font-bold text-lg">Ahmed Hassan</h4>
+              <p class="text-sm text-gray-600">Striker • Champions</p>
+            </div>
+          </div>
+          <div class="space-y-2 text-sm">
+            <p><span class="font-semibold">Age:</span> 27</p>
+            <p><span class="font-semibold">Experience:</span> 7 years</p>
+            <p><span class="font-semibold">Joined:</span> 2020</p>
+            <p><span class="font-semibold">Strengths:</span> Finishing, movement</p>
+          </div>
+        </div>
+
+        <div class="bg-white rounded-lg shadow-lg p-6 border-l-4 border-royalBlue">
+          <div class="flex items-center mb-4">
+            <div class="w-12 h-12 bg-royalBlue rounded-full flex items-center justify-center mr-3">
+              <span class="text-white font-bold">LW</span>
+            </div>
+            <div>
+              <h4 class="font-bold text-lg">Tom Anderson</h4>
+              <p class="text-sm text-gray-600">Left Winger • Champions</p>
+            </div>
+          </div>
+          <div class="space-y-2 text-sm">
+            <p><span class="font-semibold">Age:</span> 25</p>
+            <p><span class="font-semibold">Experience:</span> 5 years</p>
+            <p><span class="font-semibold">Joined:</span> 2021</p>
+            <p><span class="font-semibold">Strengths:</span> Creativity, crossing</p>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- STRIKERS TEAM PLAYERS -->
+    <div class="mb-16">
+      <div class="bg-royalOrange text-white rounded-xl p-6 mb-8">
+        <h3 class="text-3xl font-bold text-center">Strikers Squad</h3>
+        <p class="text-center text-orange-100 mt-2">Dynamic attacking force with relentless energy</p>
+      </div>
+
+      <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
+        <!-- Goalkeeper -->
+        <div class="bg-white rounded-lg shadow-lg p-6 border-l-4 border-royalOrange">
+          <div class="flex items-center mb-4">
+            <div class="w-12 h-12 bg-royalOrange rounded-full flex items-center justify-center mr-3">
+              <span class="text-white font-bold">GK</span>
+            </div>
+            <div>
+              <h4 class="font-bold text-lg">Sarah Miller</h4>
+              <p class="text-sm text-gray-600">Goalkeeper • Strikers</p>
+            </div>
+          </div>
+          <div class="space-y-2 text-sm">
+            <p><span class="font-semibold">Age:</span> 26</p>
+            <p><span class="font-semibold">Experience:</span> 6 years</p>
+            <p><span class="font-semibold">Joined:</span> 2021</p>
+            <p><span class="font-semibold">Strengths:</span> Reflexes, shot-stopping</p>
+          </div>
+        </div>
+
+        <!-- Defenders -->
+        <div class="bg-white rounded-lg shadow-lg p-6 border-l-4 border-royalOrange">
+          <div class="flex items-center mb-4">
+            <div class="w-12 h-12 bg-royalOrange rounded-full flex items-center justify-center mr-3">
+              <span class="text-white font-bold">CB</span>
+            </div>
+            <div>
+              <h4 class="font-bold text-lg">Emma Johnson</h4>
+              <p class="text-sm text-gray-600">Center Back • Strikers</p>
+            </div>
+          </div>
+          <div class="space-y-2 text-sm">
+            <p><span class="font-semibold">Age:</span> 24</p>
+            <p><span class="font-semibold">Experience:</span> 4 years</p>
+            <p><span class="font-semibold">Joined:</span> 2021</p>
+            <p><span class="font-semibold">Strengths:</span> Reading the game, composure</p>
+          </div>
+        </div>
+
+        <div class="bg-white rounded-lg shadow-lg p-6 border-l-4 border-royalOrange">
+          <div class="flex items-center mb-4">
+            <div class="w-12 h-12 bg-royalOrange rounded-full flex items-center justify-center mr-3">
+              <span class="text-white font-bold">CB</span>
+            </div>
+            <div>
+              <h4 class="font-bold text-lg">Maria Rodriguez</h4>
+              <p class="text-sm text-gray-600">Center Back • Strikers</p>
+            </div>
+          </div>
+          <div class="space-y-2 text-sm">
+            <p><span class="font-semibold">Age:</span> 27</p>
+            <p><span class="font-semibold">Experience:</span> 7 years</p>
+            <p><span class="font-semibold">Joined:</span> 2021</p>
+            <p><span class="font-semibold">Strengths:</span> Leadership, aerial ability</p>
+          </div>
+        </div>
+
+        <div class="bg-white rounded-lg shadow-lg p-6 border-l-4 border-royalOrange">
+          <div class="flex items-center mb-4">
+            <div class="w-12 h-12 bg-royalOrange rounded-full flex items-center justify-center mr-3">
+              <span class="text-white font-bold">RB</span>
+            </div>
+            <div>
+              <h4 class="font-bold text-lg">Sophie Chen</h4>
+              <p class="text-sm text-gray-600">Right Back • Strikers</p>
+            </div>
+          </div>
+          <div class="space-y-2 text-sm">
+            <p><span class="font-semibold">Age:</span> 23</p>
+            <p><span class="font-semibold">Experience:</span> 3 years</p>
+            <p><span class="font-semibold">Joined:</span> 2023</p>
+            <p><span class="font-semibold">Strengths:</span> Overlaps, stamina</p>
+          </div>
+        </div>
+
+        <div class="bg-white rounded-lg shadow-lg p-6 border-l-4 border-royalOrange">
+          <div class="flex items-center mb-4">
+            <div class="w-12 h-12 bg-royalOrange rounded-full flex items-center justify-center mr-3">
+              <span class="text-white font-bold">LB</span>
+            </div>
+            <div>
+              <h4 class="font-bold text-lg">Jessica Brown</h4>
+              <p class="text-sm text-gray-600">Left Back • Strikers</p>
+            </div>
+          </div>
+          <div class="space-y-2 text-sm">
+            <p><span class="font-semibold">Age:</span> 25</p>
+            <p><span class="font-semibold">Experience:</span> 5 years</p>
+            <p><span class="font-semibold">Joined:</span> 2021</p>
+            <p><span class="font-semibold">Strengths:</span> Crossing, defensive positioning</p>
+          </div>
+        </div>
+
+        <!-- Midfielders -->
+        <div class="bg-white rounded-lg shadow-lg p-6 border-l-4 border-royalOrange">
+          <div class="flex items-center mb-4">
+            <div class="w-12 h-12 bg-royalOrange rounded-full flex items-center justify-center mr-3">
+              <span class="text-white font-bold">CDM</span>
+            </div>
+            <div>
+              <h4 class="font-bold text-lg">Rachel Kim</h4>
+              <p class="text-sm text-gray-600">Defensive Midfielder • Strikers</p>
+            </div>
+          </div>
+          <div class="space-y-2 text-sm">
+            <p><span class="font-semibold">Age:</span> 26</p>
+            <p><span class="font-semibold">Experience:</span> 6 years</p>
+            <p><span class="font-semibold">Joined:</span> 2021</p>
+            <p><span class="font-semibold">Strengths:</span> Pressing, recovery</p>
+          </div>
+        </div>
+
+        <div class="bg-white rounded-lg shadow-lg p-6 border-l-4 border-royalOrange">
+          <div class="flex items-center mb-4">
+            <div class="w-12 h-12 bg-royalOrange rounded-full flex items-center justify-center mr-3">
+              <span class="text-white font-bold">CM</span>
+            </div>
+            <div>
+              <h4 class="font-bold text-lg">Lisa Wang</h4>
+              <p class="text-sm text-gray-600">Central Midfielder • Strikers</p>
+            </div>
+          </div>
+          <div class="space-y-2 text-sm">
+            <p><span class="font-semibold">Age:</span> 24</p>
+            <p><span class="font-semibold">Experience:</span> 4 years</p>
+            <p><span class="font-semibold">Joined:</span> 2022</p>
+            <p><span class="font-semibold">Strengths:</span> Vision, passing accuracy</p>
+          </div>
+        </div>
+
+        <div class="bg-white rounded-lg shadow-lg p-6 border-l-4 border-royalOrange">
+          <div class="flex items-center mb-4">
+            <div class="w-12 h-12 bg-royalOrange rounded-full flex items-center justify-center mr-3">
+              <span class="text-white font-bold">CAM</span>
+            </div>
+            <div>
+              <h4 class="font-bold text-lg">Nina Patel</h4>
+              <p class="text-sm text-gray-600">Attacking Midfielder • Strikers</p>
+            </div>
+          </div>
+          <div class="space-y-2 text-sm">
+            <p><span class="font-semibold">Age:</span> 23</p>
+            <p><span class="font-semibold">Experience:</span> 3 years</p>
+            <p><span class="font-semibold">Joined:</span> 2023</p>
+            <p><span class="font-semibold">Strengths:</span> Creativity, dribbling</p>
+          </div>
+        </div>
+
+        <!-- Forwards -->
+        <div class="bg-white rounded-lg shadow-lg p-6 border-l-4 border-royalOrange">
+          <div class="flex items-center mb-4">
+            <div class="w-12 h-12 bg-royalOrange rounded-full flex items-center justify-center mr-3">
+              <span class="text-white font-bold">RW</span>
+            </div>
+            <div>
+              <h4 class="font-bold text-lg">Zoe Martinez</h4>
+              <p class="text-sm text-gray-600">Right Winger • Strikers</p>
+            </div>
+          </div>
+          <div class="space-y-2 text-sm">
+            <p><span class="font-semibold">Age:</span> 22</p>
+            <p><span class="font-semibold">Experience:</span> 2 years</p>
+            <p><span class="font-semibold">Joined:</span> 2024</p>
+            <p><span class="font-semibold">Strengths:</span> Pace, finishing</p>
+          </div>
+        </div>
+
+        <div class="bg-white rounded-lg shadow-lg p-6 border-l-4 border-royalOrange">
+          <div class="flex items-center mb-4">
+            <div class="w-12 h-12 bg-royalOrange rounded-full flex items-center justify-center mr-3">
+              <span class="text-white font-bold">ST</span>
+            </div>
+            <div>
+              <h4 class="font-bold text-lg">Amanda Foster</h4>
+              <p class="text-sm text-gray-600">Striker • Strikers</p>
+            </div>
+          </div>
+          <div class="space-y-2 text-sm">
+            <p><span class="font-semibold">Age:</span> 25</p>
+            <p><span class="font-semibold">Experience:</span> 5 years</p>
+            <p><span class="font-semibold">Joined:</span> 2021</p>
+            <p><span class="font-semibold">Strengths:</span> Goal-scoring, movement</p>
+          </div>
+        </div>
+
+        <div class="bg-white rounded-lg shadow-lg p-6 border-l-4 border-royalOrange">
+          <div class="flex items-center mb-4">
+            <div class="w-12 h-12 bg-royalOrange rounded-full flex items-center justify-center mr-3">
+              <span class="text-white font-bold">LW</span>
+            </div>
+            <div>
+              <h4 class="font-bold text-lg">Isabella Rossi</h4>
+              <p class="text-sm text-gray-600">Left Winger • Strikers</p>
+            </div>
+          </div>
+          <div class="space-y-2 text-sm">
+            <p><span class="font-semibold">Age:</span> 24</p>
+            <p><span class="font-semibold">Experience:</span> 4 years</p>
+            <p><span class="font-semibold">Joined:</span> 2022</p>
+            <p><span class="font-semibold">Strengths:</span> Tricking, crossing</p>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- TEAM STATISTICS SUMMARY -->
+    <div class="bg-gradient-to-r from-royalBlue to-royalOrange rounded-xl p-8 text-white text-center">
+      <h3 class="text-3xl font-bold mb-6">Royal FC All-Stars Overview</h3>
+      <div class="grid md:grid-cols-4 gap-6">
+        <div>
+          <div class="text-4xl font-bold mb-2">26</div>
+          <p class="text-lg">Total Players</p>
+          <p class="text-sm opacity-90">12 Champions + 14 Strikers</p>
+        </div>
+        <div>
+          <div class="text-4xl font-bold mb-2">25.2</div>
+          <p class="text-lg">Average Age</p>
+          <p class="text-sm opacity-90">Years of experience</p>
+        </div>
+        <div>
+          <div class="text-4xl font-bold mb-2">6.1</div>
+          <p class="text-lg">Avg Experience</p>
+          <p class="text-sm opacity-90">Years in football</p>
+        </div>
+        <div>
+          <div class="text-4xl font-bold mb-2">2021</div>
+          <p class="text-lg">Club Founded</p>
+          <p class="text-sm opacity-90">All-Stars tradition</p>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- JOIN THE FAMILY CTA -->
+  <div class="text-center">
+    <div class="bg-gradient-to-r from-royalBlue to-royalOrange rounded-xl p-8 text-white">
+      <h2 class="text-3xl font-bold mb-4">Ready to Join the Royal FC Family?</h2>
+      <p class="text-lg mb-6 opacity-90">
+        Whether you aspire to join the tactical Champions or the dynamic Strikers,
+        Royal FC offers the perfect environment to reach your full potential.
+      </p>
+      <div class="flex flex-col sm:flex-row gap-4 justify-center">
+        <a href="contact.html" class="bg-white text-royalBlue px-8 py-4 rounded-lg font-semibold text-lg hover:bg-gray-100 transition-colors shadow-lg">
+          Join Our Club
+        </a>
+        <a href="fixtures.html" class="border-2 border-white px-8 py-4 rounded-lg font-semibold text-lg hover:bg-white hover:text-royalBlue transition-colors">
+          Watch Our Teams Play
+        </a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- FOOTER -->
+<footer class="bg-royalBlue text-white py-12">
+  <div class="max-w-7xl mx-auto px-4 grid md:grid-cols-4 gap-8">
+    <div>
+      <h3 class="font-bold text-xl mb-4">Royal FC</h3>
+      <p>Passion • Discipline • Victory</p>
+      <p class="mt-2">Building champions on and off the field.</p>
+    </div>
+    <div>
+      <h4 class="font-semibold mb-4">Quick Links</h4>
+      <ul class="space-y-2">
+        <li><a href="about.html" class="hover:text-royalOrange">About Us</a></li>
+        <li><a href="teams.html" class="hover:text-royalOrange">Teams</a></li>
+        <li><a href="fixtures.html" class="hover:text-royalOrange">Fixtures</a></li>
+        <li><a href="news.html" class="hover:text-royalOrange">News</a></li>
+      </ul>
+    </div>
+    <div>
+      <h4 class="font-semibold mb-4">Resources</h4>
+      <ul class="space-y-2">
+        <li><a href="gallery.html" class="hover:text-royalOrange">Gallery</a></li>
+        <li><a href="contact.html" class="hover:text-royalOrange">Contact</a></li>
+        <li><a href="#" class="hover:text-royalOrange">Privacy Policy</a></li>
+        <li><a href="#" class="hover:text-royalOrange">Terms of Service</a></li>
+      </ul>
+    </div>
+    <div>
+      <h4 class="font-semibold mb-4">Follow Us</h4>
+      <div class="flex space-x-4">
+        <a href="#" class="hover:text-royalOrange" aria-label="Facebook">
+          <svg class="w-6 h-6" fill="currentColor" viewBox="0 0 24 24"><path d="M24 4.557c-.883.392-1.832.656-2.828.775 1.017-.609 1.798-1.574 2.165-2.724-.951.564-2.005.974-3.127 1.195-.897-.957-2.178-1.555-3.594-1.555-3.179 0-5.515 2.966-4.797 6.045-4.091-.205-7.719-2.165-10.148-5.144-1.29 2.213-.669 5.108 1.523 6.574-.806-.026-1.566-.247-2.229-.616-.054 2.281 1.581 4.415 3.949 4.89-.693.188-1.452.232-2.224.084.626 1.956 2.444 3.379 4.6 3.419-2.07 1.623-4.678 2.348-7.29 2.04 2.179 1.397 4.768 2.212 7.548 2.212 9.142 0 14.307-7.721 13.995-14.646.962-.695 1.797-1.562 2.457-2.549z"/></svg>
+        </a>
+        <a href="#" class="hover:text-royalOrange" aria-label="Twitter">
+          <svg class="w-6 h-6" fill="currentColor" viewBox="0 0 24 24"><path d="M22.46 6c-.77.35-1.6.58-2.46.69.88-.53 1.56-1.37 1.88-2.38-.83.5-1.75.85-2.72 1.05C18.37 4.5 17.26 4 16 4c-2.35 0-4.27 1.92-4.27 4.29 0 .34.04.67.11.98C8.28 9.09 5.11 7.38 3 4.79c-.37.63-.58 1.37-.58 2.15 0 1.49.75 2.81 1.91 3.56-.71 0-1.37-.2-1.95-.5v.03c0 2.08 1.48 3.82 3.44 4.21a4.22 4.22 0 0 1-1.93.07 4.28 4.28 0 0 0 4 2.98 8.521 8.521 0 0 1-5.33 1.84c-.34 0-.68-.02-1.02-.06C3.44 20.29 5.7 21 8.12 21 16 21 20.33 14.46 20.33 8.79c0-.19 0-.37-.01-.56.84-.6 1.56-1.36 2.14-2.23z"/></svg>
+        </a>
+        <a href="#" class="hover:text-royalOrange" aria-label="Instagram">
+          <svg class="w-6 h-6" fill="currentColor" viewBox="0 0 24 24"><path d="M12.017 0C5.396 0 .029 5.367.029 11.987c0 5.079 3.158 9.417 7.618 11.174-.105-.949-.199-2.403.041-3.439.219-.937 1.406-5.957 1.406-5.957s-.359-.72-.359-1.781c0-1.663.967-2.911 2.168-2.911 1.024 0 1.518.769 1.518 1.688 0 1.029-.653 2.567-.992 3.992-.285 1.193.6 2.165 1.775 2.165 2.128 0 3.768-2.245 3.768-5.487 0-2.861-2.063-4.869-5.008-4.869-3.41 0-5.409 2.562-5.409 5.199 0 1.033.394 2.143.889 2.741.097.118.112.221.085.345-.09.375-.293 1.199-.334 1.363-.053.225-.172.271-.402.165-1.495-.69-2.433-2.878-2.433-4.646 0-3.776 2.748-7.252 7.92-7.252 4.158 0 7.392 2.967 7.392 6.923 0 4.135-2.607 7.462-6.233 7.462-1.214 0-2.357-.629-2.746-1.378l-.748 2.853c-.271 1.043-1.002 2.35-1.492 3.146C9.57 23.812 10.763 24.009 12.017 24.009c6.624 0 11.99-5.367 11.99-11.987C24.007 5.367 18.641.001 12.017.001z"/></svg>
+        </a>
+      </div>
+    </div>
+  </div>
+  <div class="border-t border-white mt-8 pt-8 text-center">
+    <p>© 2026 Royal FC. All Rights Reserved.</p>
+  </div>
+</footer>
+
+<script>
+  const menuToggle = document.getElementById('menu-toggle');
+  const menuClose = document.getElementById('menu-close');
+  const mobileMenu = document.getElementById('mobile-menu');
+
+  menuToggle.addEventListener('click', () => {
+    mobileMenu.classList.toggle('-translate-x-full');
+  });
+
+  menuClose.addEventListener('click', () => {
+    mobileMenu.classList.add('-translate-x-full');
+  });
+</script>
+
+</body>
+</html>

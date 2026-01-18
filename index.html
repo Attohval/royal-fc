@@ -1,0 +1,463 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Royal FC | Home</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: {
+            royalBlue: '#1e3a8a',
+            royalOrange: '#f97316'
+          }
+        }
+      }
+    }
+  </script>
+</head>
+<body class="bg-gray-100 pt-16">
+
+<!-- NAVBAR -->
+<nav class="fixed top-0 w-full bg-royalBlue text-white z-10">
+  <div class="max-w-7xl mx-auto flex justify-between items-center p-4">
+    <div class="flex items-center gap-2">
+      <img src="assets/logo/logo.png" class="h-10" alt="Royal FC Logo">
+      <span class="font-bold text-xl">Royal FC</span>
+    </div>
+    <div class="md:hidden">
+      <button id="menu-toggle" class="text-white focus:outline-none" aria-label="Open menu">
+        <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"></path>
+        </svg>
+      </button>
+    </div>
+    <div class="space-x-6 hidden md:flex" id="menu">
+      <a href="index.html" class="hover:text-royalOrange">Home</a>
+      <a href="about.html" class="hover:text-royalOrange">About</a>
+      <a href="teams.html" class="hover:text-royalOrange">Teams</a>
+      <a href="fixtures.html" class="hover:text-royalOrange">Fixtures</a>
+      <a href="news.html" class="hover:text-royalOrange">News</a>
+      <a href="gallery.html" class="hover:text-royalOrange">Gallery</a>
+      <a href="contact.html" class="hover:text-royalOrange">Contact</a>
+    </div>
+  </div>
+  <div class="md:hidden fixed top-0 left-0 h-full w-64 bg-royalBlue text-white transform -translate-x-full transition-transform duration-300 ease-in-out z-20" id="mobile-menu">
+    <div class="flex justify-between items-center p-4">
+      <span class="font-bold text-xl">Menu</span>
+      <button id="menu-close" class="text-white focus:outline-none" aria-label="Close menu">
+        <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"></path>
+        </svg>
+      </button>
+    </div>
+    <a href="index.html" class="block px-4 py-2 hover:bg-royalOrange">Home</a>
+    <a href="about.html" class="block px-4 py-2 hover:bg-royalOrange">About</a>
+    <a href="teams.html" class="block px-4 py-2 hover:bg-royalOrange">Teams</a>
+    <a href="fixtures.html" class="block px-4 py-2 hover:bg-royalOrange">Fixtures</a>
+    <a href="news.html" class="block px-4 py-2 hover:bg-royalOrange">News</a>
+    <a href="gallery.html" class="block px-4 py-2 hover:bg-royalOrange">Gallery</a>
+    <a href="contact.html" class="block px-4 py-2 hover:bg-royalOrange">Contact</a>
+  </div>
+</nav>
+
+<!-- HERO -->
+<section class="relative bg-gradient-to-r from-royalBlue to-blue-900 text-white py-24 overflow-hidden">
+  <div class="absolute inset-0 bg-black opacity-20"></div>
+  <div class="relative max-w-6xl mx-auto px-4 text-center">
+    <div class="mb-8">
+      <img src="assets/logo/logo.png" class="h-20 mx-auto mb-6" alt="Royal FC Logo">
+      <h1 class="text-6xl font-bold mb-4">Royal FC</h1>
+      <p class="text-xl mb-2">All Stars Football Club</p>
+      <p class="text-lg opacity-90 mb-4">United in Passion • Divided in Competition • Champions in Spirit</p>
+      <div class="flex justify-center items-center gap-8 mb-6">
+        <div class="flex items-center gap-2">
+          <div class="w-8 h-8 bg-royalOrange rounded-full flex items-center justify-center">
+            <span class="text-white font-bold text-sm">C</span>
+          </div>
+          <span class="text-sm">Champions</span>
+        </div>
+        <div class="text-royalOrange text-2xl">•</div>
+        <div class="flex items-center gap-2">
+          <div class="w-8 h-8 bg-royalBlue rounded-full flex items-center justify-center">
+            <span class="text-white font-bold text-sm">S</span>
+          </div>
+          <span class="text-sm">Strikers</span>
+        </div>
+      </div>
+    </div>
+    <div class="flex flex-col sm:flex-row gap-4 justify-center">
+      <a href="fixtures.html" class="bg-royalOrange px-8 py-4 rounded-lg font-semibold text-lg hover:bg-orange-600 transition-colors shadow-lg">
+        View Fixtures
+      </a>
+      <a href="teams.html" class="border-2 border-white px-8 py-4 rounded-lg font-semibold text-lg hover:bg-white hover:text-royalBlue transition-colors">
+        Meet Our Teams
+      </a>
+    </div>
+  </div>
+  <div class="absolute bottom-0 left-0 right-0">
+    <svg viewBox="0 0 1440 120" class="w-full h-12 fill-gray-100">
+      <path d="M0,32L48,37.3C96,43,192,53,288,58.7C384,64,480,64,576,58.7C672,53,768,43,864,48C960,53,1056,75,1152,80C1248,85,1344,75,1392,69.3L1440,64L1440,120L1392,120C1344,120,1248,120,1152,120C1056,120,960,120,864,120C768,120,672,120,576,120C480,120,384,120,288,120C192,120,96,120,48,120L0,120Z"></path>
+    </svg>
+  </div>
+</section>
+
+<!-- LATEST MATCH -->
+<section class="py-16 px-4">
+  <div class="max-w-6xl mx-auto">
+    <h2 class="text-3xl font-bold text-royalBlue mb-8 text-center">Latest Result</h2>
+    <div class="bg-white rounded-xl shadow-lg p-8 max-w-2xl mx-auto">
+      <div class="flex justify-between items-center mb-6">
+        <div class="text-center">
+          <div class="w-16 h-16 bg-royalOrange rounded-full flex items-center justify-center mx-auto mb-2">
+            <span class="text-white font-bold text-lg">S</span>
+          </div>
+          <h3 class="font-bold text-lg">Strikers</h3>
+        </div>
+        <div class="text-center px-8">
+          <div class="text-4xl font-bold text-royalBlue mb-2">6 - 2</div>
+          <div class="text-sm text-gray-600">Full Time</div>
+        </div>
+        <div class="text-center">
+          <div class="w-16 h-16 bg-royalBlue rounded-full flex items-center justify-center mx-auto mb-2">
+            <span class="text-white font-bold text-lg">C</span>
+          </div>
+          <h3 class="font-bold text-lg">Champions</h3>
+        </div>
+      </div>
+      <div class="border-t pt-4 text-center text-sm text-gray-600">
+        <p>Played at Royal FC Stadium • January 15, 2026</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- UPCOMING FIXTURE -->
+<section class="bg-gray-50 py-16 px-4">
+  <div class="max-w-6xl mx-auto">
+    <h2 class="text-3xl font-bold text-royalBlue mb-8 text-center">Upcoming Fixture</h2>
+    <div class="bg-white rounded-xl shadow-lg p-8 max-w-2xl mx-auto">
+      <div class="text-center mb-6">
+        <div class="inline-flex items-center justify-center w-20 h-20 bg-royalBlue rounded-full mb-4">
+          <svg class="w-10 h-10 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 7V3m8 4V3m-9 8h10M5 21h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v12a2 2 0 002 2z"></path>
+          </svg>
+        </div>
+        <h3 class="text-2xl font-bold text-royalBlue mb-2">Champions vs Strikers</h3>
+        <p class="text-lg text-gray-600 mb-4">Season Championship Final</p>
+      </div>
+      <div class="grid md:grid-cols-3 gap-4 text-center">
+        <div>
+          <div class="text-sm text-gray-600 mb-1">Date</div>
+          <div class="font-semibold">Saturday, Jan 25</div>
+        </div>
+        <div>
+          <div class="text-sm text-gray-600 mb-1">Kickoff</div>
+          <div class="font-semibold">9:00 AM</div>
+        </div>
+        <div>
+          <div class="text-sm text-gray-600 mb-1">Venue</div>
+          <div class="font-semibold">Royal FC Stadium</div>
+        </div>
+      </div>
+      <div class="mt-6 text-center">
+        <a href="fixtures.html" class="bg-royalOrange px-6 py-3 rounded-lg font-semibold hover:bg-orange-600 transition-colors">
+          View All Fixtures
+        </a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- CLUB STATISTICS -->
+<section class="py-16 px-4 bg-royalBlue text-white">
+  <div class="max-w-6xl mx-auto">
+    <h2 class="text-3xl font-bold mb-12 text-center">Club Statistics</h2>
+    <div class="grid md:grid-cols-4 gap-8">
+      <div class="text-center">
+        <div class="w-20 h-20 bg-royalOrange rounded-full flex items-center justify-center mx-auto mb-4">
+          <span class="text-3xl font-bold">15</span>
+        </div>
+        <h4 class="font-semibold text-lg">League Wins</h4>
+        <p class="text-sm opacity-90">This season</p>
+      </div>
+      <div class="text-center">
+        <div class="w-20 h-20 bg-royalOrange rounded-full flex items-center justify-center mx-auto mb-4">
+          <span class="text-3xl font-bold">26</span>
+        </div>
+        <h4 class="font-semibold text-lg">Active Players</h4>
+        <p class="text-sm opacity-90">All-Stars athletes</p>
+      </div>
+      <div class="text-center">
+        <div class="w-20 h-20 bg-royalOrange rounded-full flex items-center justify-center mx-auto mb-4">
+          <span class="text-3xl font-bold">8</span>
+        </div>
+        <h4 class="font-semibold text-lg">Tournaments</h4>
+        <p class="text-sm opacity-90">Major competitions</p>
+      </div>
+      <div class="text-center">
+        <div class="w-20 h-20 bg-royalOrange rounded-full flex items-center justify-center mx-auto mb-4">
+          <span class="text-3xl font-bold">5</span>
+        </div>
+        <h4 class="font-semibold text-lg">Years</h4>
+        <p class="text-sm opacity-90">Of excellence</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- CLUB UNITY -->
+<section class="py-16 px-4 bg-gradient-to-r from-royalBlue to-blue-900 text-white">
+  <div class="max-w-6xl mx-auto text-center">
+    <h2 class="text-3xl font-bold mb-6">One Club, Two Teams, United Spirit</h2>
+    <p class="text-lg mb-8 opacity-90 max-w-3xl mx-auto">
+      Royal FC is an elite all-stars football club where every member is part of our prestigious family.
+      While we compete in two dynamic teams - Champions and Strikers - we stand together as one united force,
+      sharing the same values, facilities, and commitment to excellence.
+    </p>
+    <div class="grid md:grid-cols-3 gap-8 mt-12">
+      <div class="bg-white bg-opacity-10 backdrop-blur-sm rounded-lg p-6">
+        <div class="w-16 h-16 bg-royalOrange rounded-full flex items-center justify-center mx-auto mb-4">
+          <svg class="w-8 h-8 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 20h5v-2a3 3 0 00-5.356-1.857M17 20H7m10 0v-2c0-.656-.126-1.283-.356-1.857M7 20H2v-2a3 3 0 015.356-1.857M7 20v-2c0-.656.126-1.283.356-1.857m0 0a5.002 5.002 0 019.288 0M15 7a3 3 0 11-6 0 3 3 0 016 0zm6 3a2 2 0 11-4 0 2 2 0 014 0zM7 10a2 2 0 11-4 0 2 2 0 014 0z"></path>
+          </svg>
+        </div>
+        <h3 class="text-xl font-semibold mb-3">United Family</h3>
+        <p class="opacity-90">All players are members of Royal FC, sharing training facilities, coaching staff, and club resources.</p>
+      </div>
+      <div class="bg-white bg-opacity-10 backdrop-blur-sm rounded-lg p-6">
+        <div class="w-16 h-16 bg-royalOrange rounded-full flex items-center justify-center mx-auto mb-4">
+          <svg class="w-8 h-8 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"></path>
+          </svg>
+        </div>
+        <h3 class="text-xl font-semibold mb-3">Healthy Rivalry</h3>
+        <p class="opacity-90">Friendly competition between teams builds character and pushes everyone to excel.</p>
+      </div>
+      <div class="bg-white bg-opacity-10 backdrop-blur-sm rounded-lg p-6">
+        <div class="w-16 h-16 bg-royalOrange rounded-full flex items-center justify-center mx-auto mb-4">
+          <svg class="w-8 h-8 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 10V3L4 14h7v7l9-11h-7z"></path>
+          </svg>
+        </div>
+        <h3 class="text-xl font-semibold mb-3">Shared Excellence</h3>
+        <p class="opacity-90">Both teams uphold the highest standards of Royal FC, representing our club with pride.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- TEAMS PREVIEW -->
+<section class="py-16 px-4">
+  <div class="max-w-6xl mx-auto">
+    <h2 class="text-3xl font-bold text-royalBlue mb-4 text-center">Our Royal FC Teams</h2>
+    <p class="text-center text-gray-600 mb-12 max-w-2xl mx-auto">
+      Two elite squads under one banner, competing fiercely while united in purpose and pride for Royal FC.
+    </p>
+    <div class="grid md:grid-cols-2 gap-8">
+      <div class="bg-white rounded-xl shadow-lg p-8 hover:shadow-xl transition-shadow border-l-4 border-royalOrange">
+        <div class="flex items-center mb-6">
+          <div class="w-16 h-16 bg-royalOrange rounded-full flex items-center justify-center mr-4">
+            <span class="text-white font-bold text-xl">C</span>
+          </div>
+          <div>
+            <h3 class="text-2xl font-bold text-royalBlue">Champions</h3>
+            <p class="text-gray-600">Elite squad with tactical mastery</p>
+          </div>
+        </div>
+        <p class="mb-4">Our premier team combines experience, strategic thinking, and defensive solidity. Known for their disciplined approach and leadership on the field.</p>
+        <div class="flex justify-between text-sm text-gray-600 mb-4">
+          <span>Founded: 2020</span>
+          <span>12 Players</span>
+        </div>
+        <a href="teams.html" class="text-royalOrange font-semibold hover:text-orange-600">Learn More →</a>
+      </div>
+      <div class="bg-white rounded-xl shadow-lg p-8 hover:shadow-xl transition-shadow border-l-4 border-royalBlue">
+        <div class="flex items-center mb-6">
+          <div class="w-16 h-16 bg-royalBlue rounded-full flex items-center justify-center mr-4">
+            <span class="text-white font-bold text-xl">S</span>
+          </div>
+          <div>
+            <h3 class="text-2xl font-bold text-royalBlue">Strikers</h3>
+            <p class="text-gray-600">Dynamic attacking force</p>
+          </div>
+        </div>
+        <p class="mb-4">A high-energy team that thrives on fast-paced, attacking football. The Strikers are renowned for their goal-scoring prowess and relentless pressing style.</p>
+        <div class="flex justify-between text-sm text-gray-600 mb-4">
+          <span>Founded: 2021</span>
+          <span>14 Players</span>
+        </div>
+        <a href="teams.html" class="text-royalOrange font-semibold hover:text-orange-600">Learn More →</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- FEATURED NEWS -->
+<section class="bg-gray-50 py-16 px-4">
+  <div class="max-w-6xl mx-auto">
+    <h2 class="text-3xl font-bold text-royalBlue mb-12 text-center">Latest News</h2>
+    <div class="grid md:grid-cols-3 gap-8">
+      <div class="bg-white rounded-lg shadow-lg overflow-hidden hover:shadow-xl transition-shadow">
+        <div class="h-48 bg-gray-300 flex items-center justify-center">
+          <span class="text-gray-600">Match Photo</span>
+        </div>
+        <div class="p-6">
+          <div class="text-sm text-royalOrange font-semibold mb-2">January 15, 2026</div>
+          <h3 class="text-xl font-bold mb-3">Strikers Dominate in Thrilling Victory</h3>
+          <p class="text-gray-600 mb-4">An impressive 6-2 win showcases the team's attacking prowess and tactical discipline in a memorable match.</p>
+          <a href="news.html" class="text-royalBlue font-semibold hover:text-blue-600">Read More →</a>
+        </div>
+      </div>
+      <div class="bg-white rounded-lg shadow-lg overflow-hidden hover:shadow-xl transition-shadow">
+        <div class="h-48 bg-gray-300 flex items-center justify-center">
+          <span class="text-gray-600">Training Photo</span>
+        </div>
+        <div class="p-6">
+          <div class="text-sm text-royalOrange font-semibold mb-2">January 10, 2026</div>
+          <h3 class="text-xl font-bold mb-3">New Training Facilities Open</h3>
+          <p class="text-gray-600 mb-4">State-of-the-art training grounds now available, featuring modern equipment and professional coaching facilities.</p>
+          <a href="news.html" class="text-royalBlue font-semibold hover:text-blue-600">Read More →</a>
+        </div>
+      </div>
+      <div class="bg-white rounded-lg shadow-lg overflow-hidden hover:shadow-xl transition-shadow">
+        <div class="h-48 bg-gray-300 flex items-center justify-center">
+          <span class="text-gray-600">Community Photo</span>
+        </div>
+        <div class="p-6">
+          <div class="text-sm text-royalOrange font-semibold mb-2">January 5, 2026</div>
+          <h3 class="text-xl font-bold mb-3">Community Outreach Program Success</h3>
+          <p class="text-gray-600 mb-4">Youth football clinic reaches 200+ participants, fostering the next generation of football talent.</p>
+          <a href="news.html" class="text-royalBlue font-semibold hover:text-blue-600">Read More →</a>
+        </div>
+      </div>
+    </div>
+    <div class="text-center mt-8">
+      <a href="news.html" class="bg-royalBlue text-white px-8 py-3 rounded-lg font-semibold hover:bg-blue-800 transition-colors">
+        View All News
+      </a>
+    </div>
+  </div>
+</section>
+
+<!-- TESTIMONIALS -->
+<section class="py-16 px-4">
+  <div class="max-w-6xl mx-auto">
+    <h2 class="text-3xl font-bold text-royalBlue mb-12 text-center">What Our All-Stars Say</h2>
+    <div class="grid md:grid-cols-2 gap-8">
+      <div class="bg-white rounded-lg shadow-lg p-8">
+        <div class="flex items-center mb-4">
+          <div class="w-12 h-12 bg-royalBlue rounded-full flex items-center justify-center mr-4">
+            <span class="text-white font-bold">JD</span>
+          </div>
+          <div>
+            <h4 class="font-semibold">John Doe</h4>
+            <p class="text-sm text-gray-600">Team Captain, Champions</p>
+          </div>
+        </div>
+        <blockquote class="text-gray-700 italic">
+          "Being part of Royal FC's all-stars program has elevated my game to new heights. The competition and camaraderie are unmatched."
+        </blockquote>
+      </div>
+      <div class="bg-white rounded-lg shadow-lg p-8">
+        <div class="flex items-center mb-4">
+          <div class="w-12 h-12 bg-royalOrange rounded-full flex items-center justify-center mr-4">
+            <span class="text-white font-bold">SM</span>
+          </div>
+          <div>
+            <h4 class="font-semibold">Sarah Miller</h4>
+            <p class="text-sm text-gray-600">Team Captain, Strikers</p>
+          </div>
+        </div>
+        <blockquote class="text-gray-700 italic">
+          "The all-stars environment at Royal FC pushes everyone to excel. It's not just about winning - it's about growing together as a united club."
+        </blockquote>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- CALL TO ACTION -->
+<section class="bg-gradient-to-r from-royalBlue to-blue-900 text-white py-16 px-4">
+  <div class="max-w-4xl mx-auto text-center">
+    <h2 class="text-3xl font-bold mb-6">Join the Royal FC All-Stars</h2>
+    <p class="text-lg mb-8 opacity-90">
+      Become part of our prestigious all-stars club. Whether you join the Champions or Strikers,
+      you'll be a valued member of the Royal FC family, competing at the highest level while
+      benefiting from our world-class facilities and coaching.
+    </p>
+    <div class="flex flex-col sm:flex-row gap-4 justify-center">
+      <a href="contact.html" class="bg-royalOrange px-8 py-4 rounded-lg font-semibold text-lg hover:bg-orange-600 transition-colors shadow-lg">
+        Join Our Club
+      </a>
+      <a href="about.html" class="border-2 border-white px-8 py-4 rounded-lg font-semibold text-lg hover:bg-white hover:text-royalBlue transition-colors">
+        Discover Royal FC
+      </a>
+    </div>
+  </div>
+</section>
+
+<!-- FOOTER -->
+<footer class="bg-royalBlue text-white py-12">
+  <div class="max-w-7xl mx-auto px-4 grid md:grid-cols-4 gap-8">
+    <div>
+      <h3 class="font-bold text-xl mb-4">Royal FC</h3>
+      <p>Passion • Discipline • Victory</p>
+      <p class="mt-2">Building champions on and off the field.</p>
+    </div>
+    <div>
+      <h4 class="font-semibold mb-4">Quick Links</h4>
+      <ul class="space-y-2">
+        <li><a href="about.html" class="hover:text-royalOrange">About Us</a></li>
+        <li><a href="teams.html" class="hover:text-royalOrange">Teams</a></li>
+        <li><a href="fixtures.html" class="hover:text-royalOrange">Fixtures</a></li>
+        <li><a href="news.html" class="hover:text-royalOrange">News</a></li>
+      </ul>
+    </div>
+    <div>
+      <h4 class="font-semibold mb-4">Resources</h4>
+      <ul class="space-y-2">
+        <li><a href="gallery.html" class="hover:text-royalOrange">Gallery</a></li>
+        <li><a href="contact.html" class="hover:text-royalOrange">Contact</a></li>
+        <li><a href="#" class="hover:text-royalOrange">Privacy Policy</a></li>
+        <li><a href="#" class="hover:text-royalOrange">Terms of Service</a></li>
+      </ul>
+    </div>
+    <div>
+      <h4 class="font-semibold mb-4">Follow Us</h4>
+      <div class="flex space-x-4">
+        <a href="#" class="hover:text-royalOrange" aria-label="Facebook">
+          <svg class="w-6 h-6" fill="currentColor" viewBox="0 0 24 24"><path d="M24 4.557c-.883.392-1.832.656-2.828.775 1.017-.609 1.798-1.574 2.165-2.724-.951.564-2.005.974-3.127 1.195-.897-.957-2.178-1.555-3.594-1.555-3.179 0-5.515 2.966-4.797 6.045-4.091-.205-7.719-2.165-10.148-5.144-1.29 2.213-.669 5.108 1.523 6.574-.806-.026-1.566-.247-2.229-.616-.054 2.281 1.581 4.415 3.949 4.89-.693.188-1.452.232-2.224.084.626 1.956 2.444 3.379 4.6 3.419-2.07 1.623-4.678 2.348-7.29 2.04 2.179 1.397 4.768 2.212 7.548 2.212 9.142 0 14.307-7.721 13.995-14.646.962-.695 1.797-1.562 2.457-2.549z"/></svg>
+        </a>
+        <a href="#" class="hover:text-royalOrange" aria-label="Twitter">
+          <svg class="w-6 h-6" fill="currentColor" viewBox="0 0 24 24"><path d="M22.46 6c-.77.35-1.6.58-2.46.69.88-.53 1.56-1.37 1.88-2.38-.83.5-1.75.85-2.72 1.05C18.37 4.5 17.26 4 16 4c-2.35 0-4.27 1.92-4.27 4.29 0 .34.04.67.11.98C8.28 9.09 5.11 7.38 3 4.79c-.37.63-.58 1.37-.58 2.15 0 1.49.75 2.81 1.91 3.56-.71 0-1.37-.2-1.95-.5v.03c0 2.08 1.48 3.82 3.44 4.21a4.22 4.22 0 0 1-1.93.07 4.28 4.28 0 0 0 4 2.98 8.521 8.521 0 0 1-5.33 1.84c-.34 0-.68-.02-1.02-.06C3.44 20.29 5.7 21 8.12 21 16 21 20.33 14.46 20.33 8.79c0-.19 0-.37-.01-.56.84-.6 1.56-1.36 2.14-2.23z"/></svg>
+        </a>
+        <a href="#" class="hover:text-royalOrange" aria-label="Instagram">
+          <svg class="w-6 h-6" fill="currentColor" viewBox="0 0 24 24"><path d="M12.017 0C5.396 0 .029 5.367.029 11.987c0 5.079 3.158 9.417 7.618 11.174-.105-.949-.199-2.403.041-3.439.219-.937 1.406-5.957 1.406-5.957s-.359-.72-.359-1.781c0-1.663.967-2.911 2.168-2.911 1.024 0 1.518.769 1.518 1.688 0 1.029-.653 2.567-.992 3.992-.285 1.193.6 2.165 1.775 2.165 2.128 0 3.768-2.245 3.768-5.487 0-2.861-2.063-4.869-5.008-4.869-3.41 0-5.409 2.562-5.409 5.199 0 1.033.394 2.143.889 2.741.097.118.112.221.085.345-.09.375-.293 1.199-.334 1.363-.053.225-.172.271-.402.165-1.495-.69-2.433-2.878-2.433-4.646 0-3.776 2.748-7.252 7.92-7.252 4.158 0 7.392 2.967 7.392 6.923 0 4.135-2.607 7.462-6.233 7.462-1.214 0-2.357-.629-2.746-1.378l-.748 2.853c-.271 1.043-1.002 2.35-1.492 3.146C9.57 23.812 10.763 24.009 12.017 24.009c6.624 0 11.99-5.367 11.99-11.987C24.007 5.367 18.641.001 12.017.001z"/></svg>
+        </a>
+      </div>
+    </div>
+  </div>
+  <div class="border-t border-white mt-8 pt-8 text-center">
+    <p>© 2026 Royal FC. All Rights Reserved.</p>
+  </div>
+</footer>
+
+<script>
+  const menuToggle = document.getElementById('menu-toggle');
+  const menuClose = document.getElementById('menu-close');
+  const mobileMenu = document.getElementById('mobile-menu');
+
+  menuToggle.addEventListener('click', () => {
+    mobileMenu.classList.toggle('-translate-x-full');
+  });
+
+  menuClose.addEventListener('click', () => {
+    mobileMenu.classList.add('-translate-x-full');
+  });
+</script>
+
+</body>
+</html>
